@@ -1,43 +1,90 @@
 # Speech Signal Processing
 
-A MATLAB-based project focused on speech signal analysis, speech synthesis, and automatic speech segmentation.
-
-The project explores fundamental digital signal processing techniques applied to speech signals, including frequency-domain analysis, source-filter speech synthesis, and time-domain feature extraction.
+A MATLAB-based project covering fundamental digital signal processing techniques applied to speech signals, including speech analysis, synthesis, segmentation, pitch estimation, and signal quantization.
 
 Project Overview
 
-The repository contains three main tasks:
+The project is organized into two groups of tasks.
+
+Part 1 — Speech Analysis and Synthesis
 
 1. Speech Signal Analysis
 
-* Loading and analyzing speech signals.
-* Removing the DC component.
-* Signal normalization.
-* Time-domain visualization.
-* Frequency-domain analysis using the Fast Fourier Transform (FFT).
-* Comparing the spectral characteristics of different speech sounds.
+* Speech signal loading and visualization.
+* DC component removal and signal normalization.
+* Time-domain and frequency-domain analysis using FFT.
+* Spectral comparison of different speech sounds.
 
 2. Speech Synthesis
 
-* Generating excitation pulses.
-* Modeling glottal airflow using the Rosenberg model.
-* Implementing a source-filter model of speech production.
-* Synthesizing vowels (A, E, O).
-* Investigating the influence of fundamental frequency and filter parameters on the synthesized speech.
-* Analyzing synthesized signals in the time and frequency domains.
+* Excitation pulse generation.
+* Glottal airflow modeling using the Rosenberg model.
+* Source-filter model of speech production.
+* Synthesis of vowels (A, E, O).
+* Analysis of fundamental frequency and filter parameters.
 
 3. Speech Segmentation
 
-* Loading and preprocessing speech recordings.
-* Converting stereo signals to mono and resampling.
-* Calculating short-time energy (STE) and zero-crossing rate (ZCR).
-* Detecting speech segments using adaptive thresholding.
-* Merging short gaps and removing short segments.
-* Refining segment boundaries using zero-crossing information.
+* Speech signal preprocessing.
+* Short-Time Energy (STE) calculation.
+* Zero-Crossing Rate (ZCR) calculation.
+* Adaptive thresholding for speech segment detection.
+* Segment boundary refinement.
+
+Part 2 — Pitch Estimation and Quantization
+
+4. Pitch Estimation
+
+* Pitch estimation using the parallel processing method.
+* Autocorrelation with center clipping.
+* Comparison of the estimated fundamental frequencies.
+
+5. Speech Signal Quantization
+
+* Uniform Mid-Tread quantization.
+* Uniform Mid-Rise quantization.
+* μ-law companding.
+* Signal reconstruction and SNR evaluation.
+* Analysis of quantization performance for different bit depths and compression parameters.
+
+6. Delta Quantization
+
+* Delta modulation and signal reconstruction.
+* Reconstruction error analysis.
+* Investigation of slope overload distortion and granular noise.
+* Step-size selection using the histogram of consecutive sample differences.
+
+Technologies and Methods
+
+* MATLAB
+* Digital Signal Processing (DSP)
+* Fast Fourier Transform (FFT)
+* Source-Filter Speech Production Model
+* Rosenberg Glottal Model
+* Pitch Estimation
+* Autocorrelation
+* Uniform Quantization
+* μ-law Companding
+* Delta Modulation
+* Short-Time Energy (STE)
+* Zero-Crossing Rate (ZCR)
+* Signal-to-Noise Ratio (SNR)
 
 Repository Structure
 
 speech-signal-processing/
+│
+├── audio/
+│   ├── a.wav
+│   ├── s.wav
+│   ├── c.wav
+│   └── recenica.wav
+│
+├── additional_tasks/
+│   ├── pitch_estimation.m
+│   ├── speech_quantization.m
+│   ├── speech_delta_quantization.m
+│   └── z1.wav
 │
 ├── speech_signal_analysis.m
 ├── speech_synthesis.m
@@ -50,49 +97,22 @@ speech-signal-processing/
 ├── README.md
 └── .gitignore
 
-Technologies and Methods
-
-* MATLAB
-* Digital Signal Processing (DSP)
-* Fast Fourier Transform (FFT)
-* Source-Filter Speech Production Model
-* Rosenberg Glottal Model
-* Short-Time Energy (STE)
-* Zero-Crossing Rate (ZCR)
-* Adaptive Thresholding
-* Speech Signal Visualization
-
 Requirements
 
 * MATLAB
-* Signal Processing Toolbox may be required for certain functions, such as resampling and window generation.
-* Required audio input files must be available when running the corresponding scripts.
-
-Audio Input Files
-
-The analysis and segmentation scripts use the following input files:
-
-* a.wav
-* s.wav
-* c.wav
-* recenica.wav
-
-Make sure these files are available in the MATLAB working directory before running the corresponding scripts.
+* Signal Processing Toolbox may be required for certain functions.
+* Required audio input files must be available in the appropriate working directories.
 
 How to Run
 
-1. Clone or download this repository.
+1. Clone or download the repository.
 2. Open MATLAB.
 3. Set the repository directory as the current working directory.
 4. Make sure the required audio files are available.
-5. Run the desired script:
+5. Run the desired MATLAB script.
 
-speech_signal_analysis
-speech_synthesis
-speech_segmentation
-
-For speech synthesis, make sure that the helper functions (genpulse.m, rosenmodel.m, and makevowel.m) are available in the MATLAB path.
+For speech synthesis, ensure that the helper functions are available in the MATLAB path.
 
 Purpose
 
-This project demonstrates the application of digital signal processing concepts to speech analysis and synthesis, with a focus on understanding speech production, signal characteristics, and basic speech segmentation techniques.
+The project demonstrates the application of digital signal processing methods to speech signals, combining theoretical concepts with MATLAB implementations, signal visualization, and quantitative performance evaluation.
