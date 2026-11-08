@@ -106,16 +106,26 @@ Repository Structure
 speech-signal-processing/
 │
 ├── audio/
-│   ├── a.wav
-│   ├── s.wav
-│   ├── c.wav
-│   └── recenica.wav
 │
 ├── additional_tasks/
 │   ├── pitch_estimation.m
 │   ├── speech_quantization.m
 │   ├── speech_delta_quantization.m
+│   ├── record_audio.m
 │   └── z1.wav
+│
+├── digit_recognition/
+│   ├── train/
+│   ├── test/
+│   ├── preprocessing.m
+│   ├── feature_extraction.m
+│   ├── digit_recognition.m
+│   ├── autocorrelation.m
+│   ├── estimate_LPC.m
+│   ├── show_cepstrum.m
+│   ├── show_features.m
+│   ├── show_lpc.m
+│   └── show_preprocessing.m
 │
 ├── speech_signal_analysis.m
 ├── speech_synthesis.m
