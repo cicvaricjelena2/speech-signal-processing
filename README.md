@@ -54,6 +54,37 @@ Part 2 — Pitch Estimation and Quantization
 * Investigation of slope overload distortion and granular noise.
 * Step-size selection using the histogram of consecutive sample differences.
 
+7. Speech Digit Recognition
+
+A speech recognition system for classifying spoken digits (one, two, and three) using acoustic feature extraction and machine learning.
+
+Signal Processing and Feature Extraction
+
+* Audio preprocessing and amplitude normalization.
+* Silence detection and removal.
+* Mel-Frequency Cepstral Coefficients (MFCC).
+* Linear Predictive Coding (LPC) analysis.
+* Real cepstrum analysis and pitch estimation.
+
+Classification
+
+* K-Nearest Neighbors (KNN) classifier.
+* Classification using 13-dimensional MFCC feature vectors.
+* Training and testing on separately recorded speech samples.
+
+Evaluation
+
+* Training and test confusion matrices.
+* Classification accuracy.
+* Comparison of predicted and actual digit labels.
+
+Reported Results
+
+* Training accuracy: 96.7%
+* Test accuracy: 100%
+
+The dataset consists of recordings of three spoken digits by a single speaker. It contains 30 training samples and 15 test samples. These results should therefore be interpreted within the scope of this small, speaker-dependent dataset.
+
 Technologies and Methods
 
 * MATLAB
